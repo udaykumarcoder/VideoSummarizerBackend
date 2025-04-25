@@ -1,0 +1,6 @@
+Flask
+pytube
+youtube-transcript-api
+requests
+python-dotenv
+yt-dlp
