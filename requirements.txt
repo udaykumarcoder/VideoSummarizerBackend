@@ -4,3 +4,5 @@ youtube-transcript-api
 requests
 python-dotenv
 yt-dlp
+flask-cors
+gunicorn

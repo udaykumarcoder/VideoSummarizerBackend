@@ -26,10 +26,10 @@ def get_summary(video_link):
             {"role": "user", "content": f"Summarize this YouTube transcript:\n\n{transcript}"}
         ],
         "temperature": 0.5,
-        "max_tokens": 1024
+        "max_tokens": 8192,
     }
 
     response = requests.post(GROQ_URL, headers=headers, json=data)
     response.raise_for_status()
 
-    return response.json()["choices"][0]["message"]["content"]
+    return transcript,response.json()["choices"][0]["message"]["content"]

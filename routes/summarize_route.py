@@ -13,8 +13,8 @@ def summarize_video():
         return jsonify({"error": "No video link provided"}), 400
 
     try:
-        summary = get_summary(video_link)
-        return jsonify({"summary": summary})
+        transcript,summary = get_summary(video_link)
+        return jsonify({"summary": summary, "transcript": transcript}), 200
     except Exception as e:
         # Capture full stack trace and print it in the console
         error_message = str(e)
